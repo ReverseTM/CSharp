@@ -1,0 +1,12 @@
+C:\Users\Reverse\Desktop\RiderProjects\PracticeLecture\PracticeDomain\bin\Debug\net7.0\PracticeDomain.deps.json
+C:\Users\Reverse\Desktop\RiderProjects\PracticeLecture\PracticeDomain\bin\Debug\net7.0\PracticeDomain.dll
+C:\Users\Reverse\Desktop\RiderProjects\PracticeLecture\PracticeDomain\bin\Debug\net7.0\PracticeDomain.pdb
+C:\Users\Reverse\Desktop\RiderProjects\PracticeLecture\PracticeDomain\obj\Debug\net7.0\PracticeDomain.csproj.AssemblyReference.cache
+C:\Users\Reverse\Desktop\RiderProjects\PracticeLecture\PracticeDomain\obj\Debug\net7.0\PracticeDomain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Reverse\Desktop\RiderProjects\PracticeLecture\PracticeDomain\obj\Debug\net7.0\PracticeDomain.AssemblyInfoInputs.cache
+C:\Users\Reverse\Desktop\RiderProjects\PracticeLecture\PracticeDomain\obj\Debug\net7.0\PracticeDomain.AssemblyInfo.cs
+C:\Users\Reverse\Desktop\RiderProjects\PracticeLecture\PracticeDomain\obj\Debug\net7.0\PracticeDomain.csproj.CoreCompileInputs.cache
+C:\Users\Reverse\Desktop\RiderProjects\PracticeLecture\PracticeDomain\obj\Debug\net7.0\PracticeDomain.dll
+C:\Users\Reverse\Desktop\RiderProjects\PracticeLecture\PracticeDomain\obj\Debug\net7.0\refint\PracticeDomain.dll
+C:\Users\Reverse\Desktop\RiderProjects\PracticeLecture\PracticeDomain\obj\Debug\net7.0\PracticeDomain.pdb
+C:\Users\Reverse\Desktop\RiderProjects\PracticeLecture\PracticeDomain\obj\Debug\net7.0\ref\PracticeDomain.dll

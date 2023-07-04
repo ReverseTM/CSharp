@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "PracticeLecture/1.0.0": {
+        "dependencies": {
+          "PracticeDomain": "1.0.0"
+        },
+        "runtime": {
+          "PracticeLecture.dll": {}
+        }
+      },
+      "PracticeDomain/1.0.0": {
+        "runtime": {
+          "PracticeDomain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PracticeLecture/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PracticeDomain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
