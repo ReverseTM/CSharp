@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Reverse\\Desktop\\RiderProjects\\CSharp\\Practice\\PracticeLecture\\PracticeLecture.csproj": {}
+    "/home/reverse/RiderProjects/CSharp/Practice/PracticeLecture/PracticeLecture.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Reverse\\Desktop\\RiderProjects\\CSharp\\Practice\\PracticeDomain\\PracticeDomain.csproj": {
+    "/home/reverse/RiderProjects/CSharp/Practice/PracticeDomain/PracticeDomain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Reverse\\Desktop\\RiderProjects\\CSharp\\Practice\\PracticeDomain\\PracticeDomain.csproj",
+        "projectUniqueName": "/home/reverse/RiderProjects/CSharp/Practice/PracticeDomain/PracticeDomain.csproj",
         "projectName": "PracticeDomain",
-        "projectPath": "C:\\Users\\Reverse\\Desktop\\RiderProjects\\CSharp\\Practice\\PracticeDomain\\PracticeDomain.csproj",
-        "packagesPath": "C:\\Users\\Reverse\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Reverse\\Desktop\\RiderProjects\\CSharp\\Practice\\PracticeDomain\\obj\\",
+        "projectPath": "/home/reverse/RiderProjects/CSharp/Practice/PracticeDomain/PracticeDomain.csproj",
+        "packagesPath": "/home/reverse/.nuget/packages/",
+        "outputPath": "/home/reverse/RiderProjects/CSharp/Practice/PracticeDomain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Reverse\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/reverse/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -43,31 +43,36 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.14, 6.0.14]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.411\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.114/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Reverse\\Desktop\\RiderProjects\\CSharp\\Practice\\PracticeLecture\\PracticeLecture.csproj": {
+    "/home/reverse/RiderProjects/CSharp/Practice/PracticeLecture/PracticeLecture.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Reverse\\Desktop\\RiderProjects\\CSharp\\Practice\\PracticeLecture\\PracticeLecture.csproj",
+        "projectUniqueName": "/home/reverse/RiderProjects/CSharp/Practice/PracticeLecture/PracticeLecture.csproj",
         "projectName": "PracticeLecture",
-        "projectPath": "C:\\Users\\Reverse\\Desktop\\RiderProjects\\CSharp\\Practice\\PracticeLecture\\PracticeLecture.csproj",
-        "packagesPath": "C:\\Users\\Reverse\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Reverse\\Desktop\\RiderProjects\\CSharp\\Practice\\PracticeLecture\\obj\\",
+        "projectPath": "/home/reverse/RiderProjects/CSharp/Practice/PracticeLecture/PracticeLecture.csproj",
+        "packagesPath": "/home/reverse/.nuget/packages/",
+        "outputPath": "/home/reverse/RiderProjects/CSharp/Practice/PracticeLecture/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Reverse\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/reverse/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -79,8 +84,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Reverse\\Desktop\\RiderProjects\\CSharp\\Practice\\PracticeDomain\\PracticeDomain.csproj": {
-                "projectPath": "C:\\Users\\Reverse\\Desktop\\RiderProjects\\CSharp\\Practice\\PracticeDomain\\PracticeDomain.csproj"
+              "/home/reverse/RiderProjects/CSharp/Practice/PracticeDomain/PracticeDomain.csproj": {
+                "projectPath": "/home/reverse/RiderProjects/CSharp/Practice/PracticeDomain/PracticeDomain.csproj"
               }
             }
           }
@@ -100,17 +105,22 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.14, 6.0.14]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.411\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.114/RuntimeIdentifierGraph.json"
         }
       }
     }

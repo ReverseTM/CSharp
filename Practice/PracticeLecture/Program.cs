@@ -91,7 +91,11 @@ namespace PracticeLecture
             Console.WriteLine(obj1);
 
             var obj2 = new Student("Khasano", "Daniil", "Rafailovich", "М8О-213Б-21", Student.Course.CSharp);
-            Console.WriteLine(obj1.GetHashCode());
+
+            Dictionary<Student, string> hashTable = new Dictionary<Student, string>();
+            hashTable.Add(obj1, "1234");
+            Console.WriteLine(hashTable.Remove(obj1));
+
         }
     }
 }

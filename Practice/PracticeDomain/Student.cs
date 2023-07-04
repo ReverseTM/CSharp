@@ -49,11 +49,11 @@ public class Student :
 
     public override int GetHashCode()
     {
-        return _surname.GetHashCode() * 3
-               + _name.GetHashCode() * 5
-               + _patronymic.GetHashCode() * 7
-               + _studyGroup.GetHashCode() * 11
-               + _course.GetHashCode() * 13;
+        return (_surname.GetHashCode() * 2
+               + _name.GetHashCode() * 3
+               + _patronymic.GetHashCode() * 5
+               + _studyGroup.GetHashCode() * 7
+               + _course.GetHashCode() * 11) % 997;
     }
 
     public bool Equals(Student? @student)

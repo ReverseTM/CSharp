@@ -7,4 +7,4 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PracticeLecture
-build_property.ProjectDir = C:\Users\Reverse\Desktop\RiderProjects\CSharp\Practice\PracticeLecture\
+build_property.ProjectDir = /home/reverse/RiderProjects/CSharp/Practice/PracticeLecture/

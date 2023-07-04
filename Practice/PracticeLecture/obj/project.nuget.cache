@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "O2PE89ZBALZAqMzhKliBWUFvo7X2NP07N1CEGwQb9KMuJB4RZtfp7txZ/RoQiE7CA5j/5Hcqy8DeAkgY79pq1A==",
+  "dgSpecHash": "Fb2UF05WwbOpK9NAO1HbXbHNLmWFPYpRqla6MM8XBVUE/6ak7UcgO/t0Vs/IB3BqoUxmudCZ0+Fx8CSwDPB0Ag==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Reverse\\Desktop\\RiderProjects\\CSharp\\Practice\\PracticeLecture\\PracticeLecture.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/home/reverse/RiderProjects/CSharp/Practice/PracticeLecture/PracticeLecture.csproj",
+  "expectedPackageFiles": [
+    "/home/reverse/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.14/microsoft.aspnetcore.app.ref.6.0.14.nupkg.sha512"
+  ],
   "logs": []
 }
