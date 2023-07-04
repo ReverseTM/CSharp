@@ -1,6 +1,6 @@
 ﻿namespace PracticeDomain;
 
-public class Student :
+public sealed class Student :
     IEquatable<Enum>,
     IEquatable<Student>,
     IEquatable<object>
