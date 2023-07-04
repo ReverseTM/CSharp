@@ -19,7 +19,16 @@ public sealed class Student :
     private readonly string _patronymic;
     private readonly string _studyGroup;
     private readonly Course _course;
-
+    
+    /// <summary>
+    /// Конструктор класса Student
+    /// </summary>
+    /// <param name="surname">Фамилия</param>
+    /// <param name="name">Имя</param>
+    /// <param name="patronymic">Отчество</param>
+    /// <param name="studyGroup">Учебная группа</param>
+    /// <param name="course">Выбранное направление</param>
+    /// <exception cref="ArgumentNullException">Вместо строки передан null</exception>
     public Student(string? surname, string? name, string? patronymic, string? studyGroup, Course course)
     {
         _surname = surname ?? throw new ArgumentNullException(nameof(surname));

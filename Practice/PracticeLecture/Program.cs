@@ -80,22 +80,29 @@ namespace PracticeLecture
             //}
 
 
+            try
+            {
+                var obj1 = new Student("Khasanov", "Daniil", "Rafailovich", "М8О-213Б-21", Student.Course.CSharp);
+                Console.WriteLine(obj1.SurnameValue);
+                Console.WriteLine(obj1.NameValue);
+                Console.WriteLine(obj1.PatronymicValue);
+                Console.WriteLine(obj1.StudyGroupValue);
+                Console.WriteLine(obj1.ChosenCourseValue);
+                Console.WriteLine(obj1.CourseNumberValue);
+                Console.WriteLine(obj1);
 
-            var obj1 = new Student("Khasanov", "Daniil", "Rafailovich", "М8О-213Б-21", Student.Course.CSharp);
-            Console.WriteLine(obj1.SurnameValue);
-            Console.WriteLine(obj1.NameValue);
-            Console.WriteLine(obj1.PatronymicValue);
-            Console.WriteLine(obj1.StudyGroupValue);
-            Console.WriteLine(obj1.ChosenCourseValue);
-            Console.WriteLine(obj1.CourseNumberValue);
-            Console.WriteLine(obj1);
+                var obj2 = new Student("Hasanov", "Daniil", "Rafailovich", "М8О-213Б-21", Student.Course.CSharp);
 
-            var obj2 = new Student("Khasano", "Daniil", "Rafailovich", "М8О-213Б-21", Student.Course.CSharp);
+                Dictionary<Student, string> hashTable = new Dictionary<Student, string>();
+                hashTable.Add(obj1, "1234");
+                Console.WriteLine(hashTable.Remove(obj1));
 
-            Dictionary<Student, string> hashTable = new Dictionary<Student, string>();
-            hashTable.Add(obj1, "1234");
-            Console.WriteLine(hashTable.Remove(obj1));
-
+                var obj3 = new Student("Petrov", null, "Petrovich", "М8О-311Б-20", Student.Course.Yandex);
+            }
+            catch (ArgumentNullException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
