@@ -117,6 +117,10 @@ namespace PracticeLecture
             //{
             //    Console.WriteLine(ex.Message);
             //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
 
             var myArray = new OwnArray<TestClass>();
             myArray

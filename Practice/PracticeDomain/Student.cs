@@ -8,7 +8,7 @@ public sealed class Student :
     public enum Course
     {
         CSharp,
-        GO,
+        Go,
         Yandex,
         DataSet,
         InfrastructureActivities
@@ -67,10 +67,8 @@ public sealed class Student :
 
     public bool Equals(Student? @student)
     {
-        if (@student is null)
-        {
-            return false;
-        }
+        if (@student == null) return false;
+        
 
         return _surname.Equals(@student._surname, StringComparison.Ordinal)
                && _name.Equals(@student._name, StringComparison.Ordinal)
@@ -79,17 +77,17 @@ public sealed class Student :
                && _course.Equals(@student._course);
     }
 
-    public bool Equals(Enum @enum)
+    public bool Equals(Enum? @enum)
     {
+        if (@enum == null) return false;
+            
         return _course.Equals(@enum);
     }
     
     public override bool Equals(object? obj)
     {
-        if (obj is null)
-        {
-            return false;
-        }
+        if (obj == null) return false;
+        
 
         if (obj is Student @student)
         {
@@ -105,7 +103,7 @@ public sealed class Student :
 
     bool IEquatable<object>.Equals(object? obj)
     {
-        if (obj is null)
+        if (obj == null)
         {
             return false;
         }
