@@ -6,7 +6,9 @@ public abstract class TestClass :
     IEquatable<string>,
     IEquatable<int>,
     IEquatable<TestClass>,
-    IEquatable<object>
+    IEquatable<object>,
+    IComparable,
+    IComparable<TestClass>
 {
     // const, readonly
     // ref, out, in, parans
@@ -113,6 +115,31 @@ public abstract class TestClass :
         return false;
     }
 
+    public int CompareTo(object? obj)
+    {
+        if (obj == null)
+        {
+            throw new ArgumentNullException(nameof(obj));
+        }
+
+        if (obj is TestClass mgl)
+        {
+            return CompareTo(mgl);
+        }
+
+        throw new ArgumentException("Can't perform comparison operation", nameof(obj));
+    }
+
+    public int CompareTo(TestClass? obj)
+    {
+        if (obj == null)
+        {
+            throw new ArgumentNullException(nameof(obj));
+        }
+
+        return IntValue.CompareTo(obj.IntValue);
+    }
+    
     public override int GetHashCode()
     {
         return StringValue.GetHashCode() * 23 + IntValue.GetHashCode();

@@ -2,44 +2,78 @@
 
 namespace PracticeDomain;
 
-public class OwnArray:
-    IEnumerable<int>
+public class OwnArray<T>:
+    IEnumerable<T>
+    //where T: List<T>, IComparable, IComparable<T>, new()
 {
-    private int[] _array;
-    private int _actualSize;
+    public enum SortingMode
+    {
+        Ascending,
+        Descending
+    }
+    
+    private List<T> _array;
 
     public OwnArray()
     {
-        _array = new int[16];
-        _actualSize = 0;
+        _array = new List<T>();
     }
 
-    public void Insert(
-        int value,
+    public OwnArray<T> Insert(
+        T value,
         int index)
     {
-        
+        _array.Insert(index, value);
+        return this;
     }
 
-    public int FindByIndex(
-        int index)
+    public OwnArray<T> FindByIndex(
+        int index,
+        out T foundValue)
     {
-        throw new NotImplementedException();
+        foundValue = _array[index];
+        return this;
     }
 
-    public int RemoveByIndex(
-        int index)
+    public OwnArray<T> RemoveByIndex(
+        int index,
+        out T removedValue)
     {
-        throw new NotImplementedException();
+        FindByIndex(index, out removedValue);
+        _array.RemoveAt(index);
+        return this;
+    }
+    
+    public OwnArray<T> Sort(
+        IComparer<T> comparer)
+    {
+        _array.Sort(comparer);
+        return this;
+    }
+    
+    public OwnArray<T> Sort()
+    {
+        _array.Sort();
+        return this;
     }
     
     //Списковый генератор, генератор последовательностей
-    public IEnumerator<int> GetEnumerator()
+    public IEnumerator<T> GetEnumerator()
     {
-        for (int i = 0; i < _array.Length; i++)
+        foreach (var arrayItem in _array)
         {
-            yield return _array[i];
+            yield return arrayItem;
         }
+        
+        //for (int i = 0; i < _array.Count; i++)
+        //{
+        //    yield return _array[i];
+        //}
+    }
+
+    public override string ToString()
+    {
+        return $"[{string.Join(", ", _array)}]";
     }
 
     IEnumerator IEnumerable.GetEnumerator()

@@ -41,9 +41,13 @@ public sealed class Student :
     }
 
     public string SurnameValue => _surname;
+    
     public string NameValue => _name;
+    
     public string PatronymicValue => _patronymic;
+    
     public string StudyGroupValue => _studyGroup;
+    
     public Course ChosenCourseValue => _course;
 
     public char CourseNumberValue
@@ -58,11 +62,7 @@ public sealed class Student :
 
     public override int GetHashCode()
     {
-        return (_surname.GetHashCode() * 2
-               + _name.GetHashCode() * 3
-               + _patronymic.GetHashCode() * 5
-               + _studyGroup.GetHashCode() * 7
-               + _course.GetHashCode() * 11) % 997;
+        return HashCode.Combine(_surname, _name, _patronymic, _studyGroup, _course);
     }
 
     public bool Equals(Student? @student)
@@ -72,10 +72,10 @@ public sealed class Student :
             return false;
         }
 
-        return _surname.Equals(@student._surname)
-               && _name.Equals(@student._name)
-               && _patronymic.Equals(@student._patronymic)
-               && _studyGroup.Equals(@student._studyGroup)
+        return _surname.Equals(@student._surname, StringComparison.Ordinal)
+               && _name.Equals(@student._name, StringComparison.Ordinal)
+               && _patronymic.Equals(@student._patronymic, StringComparison.Ordinal)
+               && _studyGroup.Equals(@student._studyGroup, StringComparison.Ordinal)
                && _course.Equals(@student._course);
     }
 
