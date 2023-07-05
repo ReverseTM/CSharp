@@ -37,7 +37,7 @@ public sealed class Student :
         _studyGroup = studyGroup ?? throw new ArgumentNullException(nameof(studyGroup));
         _course = course;
 
-        CourseNumberValue = _studyGroup[studyGroup.IndexOf('-') + 1];
+        CourseNumberValue = _studyGroup[studyGroup.IndexOf('-') + 1] - '0';
     }
 
     public string SurnameValue => _surname;
@@ -50,7 +50,7 @@ public sealed class Student :
     
     public Course ChosenCourseValue => _course;
 
-    public char CourseNumberValue
+    public int CourseNumberValue
     {
         get;
     }

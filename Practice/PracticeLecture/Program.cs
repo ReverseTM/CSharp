@@ -134,7 +134,7 @@ namespace PracticeLecture
             {
                 Console.WriteLine($"{item} ");
             }
-
+        
             //myArray.Sort(TestClassComparer.Instance);
             //Console.WriteLine(myArray);
 
