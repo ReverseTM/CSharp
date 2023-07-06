@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZfH7YCtEAORLotzrFvUtdMoqYRRBAvYFCi0jm9B7lg4Kh6ASqQpkUeJgjfb29QlHKx12REKOg3WN4MyYLyZdXQ==",
+  "success": true,
+  "projectFilePath": "/home/reverse/RiderProjects/CSharp/PracticeTasks/Domain/Domain.csproj",
+  "expectedPackageFiles": [
+    "/home/reverse/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.14/microsoft.aspnetcore.app.ref.6.0.14.nupkg.sha512"
+  ],
+  "logs": []
+}

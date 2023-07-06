@@ -56,6 +56,15 @@ public class OwnArray<T>:
         _array.Sort();
         return this;
     }
+
+    public void FooEach(
+        Action<T> action)
+    {
+        foreach (var item in _array)
+        {
+            action(item);
+        }
+    }
     
     //Списковый генератор, генератор последовательностей
     public IEnumerator<T> GetEnumerator()
@@ -64,11 +73,6 @@ public class OwnArray<T>:
         {
             yield return arrayItem;
         }
-        
-        //for (int i = 0; i < _array.Count; i++)
-        //{
-        //    yield return _array[i];
-        //}
     }
 
     public override string ToString()
@@ -80,4 +84,6 @@ public class OwnArray<T>:
     {
         return GetEnumerator();
     }
+    
+    
 }

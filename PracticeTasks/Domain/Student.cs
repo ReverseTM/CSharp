@@ -1,4 +1,4 @@
-﻿namespace PracticeDomain;
+﻿namespace Domain;
 
 public sealed class Student :
     IEquatable<Enum>,
