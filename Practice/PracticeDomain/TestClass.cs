@@ -176,6 +176,18 @@ public sealed class TestClassDerived : TestClass
     {
         
     }
+
+    public static TestClassDerived operator +(
+        TestClassDerived? left,
+        TestClassDerived? right)
+    {
+        if (left is null) throw new ArgumentNullException(nameof(left));
+
+        if (right is null) throw new ArgumentNullException(nameof(right));
+
+        return new TestClassDerived(left.IntValue + right.IntValue, left.StringValue + right.StringValue);
+    }
+    
     public override string Foo()
     {
         return "Foo from derived class";

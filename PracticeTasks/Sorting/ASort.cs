@@ -1,6 +1,6 @@
 namespace Sorting;
 
-public interface ISort
+public abstract class ASort<T>
 {
     public enum SortingMode
     {
@@ -8,5 +8,5 @@ public interface ISort
         Descending
     }
 
-    public object[] Sort(object[]? collection, SortingMode mode);
+    public abstract T[] Sort(T[]? collection, SortingMode mode);
 }

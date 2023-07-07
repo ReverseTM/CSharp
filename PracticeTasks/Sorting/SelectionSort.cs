@@ -1,10 +1,11 @@
 namespace Sorting;
 
-public class SelectionSort<T>
+public sealed class SelectionSort<T> : 
+    ASort<T>
 {
-    public static T[] Sort(
+    public override T[] Sort(
         T[]? collection,
-        ISort.SortingMode mode)
+        SortingMode mode)
     {
         if (collection == null) throw new ArgumentNullException(nameof(collection));
 
@@ -16,7 +17,7 @@ public class SelectionSort<T>
             
             for (var j = i + 1; j < lenght; j++)
             {
-                if (mode == ISort.SortingMode.Ascending
+                if (mode == SortingMode.Ascending
                         ? collection[j] < (dynamic?)collection[currentIndex]
                         : collection[j] > (dynamic?)collection[currentIndex])
                 {

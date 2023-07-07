@@ -2,38 +2,37 @@ using Sorting;
 namespace Domain;
 public static class SortsExtensionMethods
 {
-
     public static T[] Sort<T>(
         this T[] collection,
-        ISort.SortingMode mode,
-        Delegate sortAlgorithm) where T : IComparable<T>
+        ASort<T>.SortingMode mode,
+        ASort<T> sortAlgorithm) where T : IComparable<T>
     {
-        throw new NotImplementedException();
+        return sortAlgorithm.Sort(collection, mode);
     }
 
     public static T[] Sort<T>(this T[] collection,
-        ISort.SortingMode mode,
-        Delegate sortAlgorithm,
+        ASort<T>.SortingMode mode,
+        ASort<T> sortAlgorithm,
         IComparer<T> comparer)
     {
-        throw new NotImplementedException();
+        return sortAlgorithm.Sort(collection, mode);
     }
 
     public static T[] Sort<T>(
         this T[] collection,
-        ISort.SortingMode mode,
-        Delegate sortAlgorithm,
+        ASort<T>.SortingMode mode,
+        ASort<T> sortAlgorithm,
         Comparer<T> comparer)
     {
-        throw new NotImplementedException();
+        return sortAlgorithm.Sort(collection, mode);
     }
 
     public static T[] Sort<T>(
         this T[] collection,
-        ISort.SortingMode mode,
-        Delegate sortAlgorithm,
+        ASort<T>.SortingMode mode,
+        ASort<T> sortAlgorithm,
         Comparison<T> comparison)
     {
-        throw new NotImplementedException();
+        return sortAlgorithm.Sort(collection, mode);
     }
 }

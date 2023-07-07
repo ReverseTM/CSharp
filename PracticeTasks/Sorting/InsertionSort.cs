@@ -1,8 +1,9 @@
 ﻿namespace Sorting;
 
-public class InsertionSort<T>
+public sealed class InsertionSort<T> : 
+    ASort<T>
 {
-    public static T[] Sort(T[]? collection, ISort.SortingMode mode)
+    public override T[] Sort(T[]? collection, SortingMode mode)
     {
         if (collection == null) throw new ArgumentNullException(nameof(collection));
         
@@ -13,7 +14,7 @@ public class InsertionSort<T>
 
             
             while (index > 0 
-                   && (mode == ISort.SortingMode.Ascending
+                   && (mode == SortingMode.Ascending
                        ? (dynamic?)currentNumber < collection[index - 1]
                        : (dynamic?)currentNumber > collection[index - 1]))
             {

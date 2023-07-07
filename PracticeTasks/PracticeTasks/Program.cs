@@ -142,9 +142,7 @@ class Program
 
         #region TASK3
 
-        int[] numbers = { 6, 1, -23, 93, 0, 1, -33, 73, 15, 4, -9 };
-
-        QuickSort<int>.Sort(numbers, ISort.SortingMode.Descending);
+        var numbers = new[] { new IntAndString(1, "123"), new IntAndString(1, "234"), new IntAndString(1, "345") }.Sort(ASort<IntAndString>.SortingMode.Descending, new InsertionSort<IntAndString>());
 
         foreach (var item in numbers)
         {
