@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "+D1p5WwWZ1Fehf21ssk+WXZ24fyuO+isJbGfdW4uCdLQnV+hdHYAjlQsOvYimIkoSJC0pu0VR7dUuTLcUgPYpw==",
+  "success": true,
+  "projectFilePath": "/home/reverse/RiderProjects/CSharp/PracticeTasks/Sorting/Sorting.csproj",
+  "expectedPackageFiles": [
+    "/home/reverse/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.14/microsoft.aspnetcore.app.ref.6.0.14.nupkg.sha512"
+  ],
+  "logs": []
+}

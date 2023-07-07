@@ -16,3 +16,5 @@
 /home/reverse/RiderProjects/CSharp/PracticeTasks/PracticeTasks/obj/Debug/net6.0/ref/PracticeTasks.dll
 /home/reverse/RiderProjects/CSharp/PracticeTasks/PracticeTasks/obj/Debug/net6.0/PracticeTasks.pdb
 /home/reverse/RiderProjects/CSharp/PracticeTasks/PracticeTasks/obj/Debug/net6.0/PracticeTasks.genruntimeconfig.cache
+/home/reverse/RiderProjects/CSharp/PracticeTasks/PracticeTasks/bin/Debug/net6.0/Sorting.dll
+/home/reverse/RiderProjects/CSharp/PracticeTasks/PracticeTasks/bin/Debug/net6.0/Sorting.pdb

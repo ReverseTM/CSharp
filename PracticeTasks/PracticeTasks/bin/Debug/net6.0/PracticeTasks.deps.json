@@ -8,15 +8,24 @@
     ".NETCoreApp,Version=v6.0": {
       "PracticeTasks/1.0.0": {
         "dependencies": {
-          "Domain": "1.0.0"
+          "Domain": "1.0.0",
+          "Sorting": "1.0.0"
         },
         "runtime": {
           "PracticeTasks.dll": {}
         }
       },
       "Domain/1.0.0": {
+        "dependencies": {
+          "Sorting": "1.0.0"
+        },
         "runtime": {
           "Domain.dll": {}
+        }
+      },
+      "Sorting/1.0.0": {
+        "runtime": {
+          "Sorting.dll": {}
         }
       }
     }
@@ -28,6 +37,11 @@
       "sha512": ""
     },
     "Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Sorting/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

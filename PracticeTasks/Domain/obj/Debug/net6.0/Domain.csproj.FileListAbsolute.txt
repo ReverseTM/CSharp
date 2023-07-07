@@ -10,3 +10,6 @@
 /home/reverse/RiderProjects/CSharp/PracticeTasks/Domain/obj/Debug/net6.0/Domain.dll
 /home/reverse/RiderProjects/CSharp/PracticeTasks/Domain/obj/Debug/net6.0/ref/Domain.dll
 /home/reverse/RiderProjects/CSharp/PracticeTasks/Domain/obj/Debug/net6.0/Domain.pdb
+/home/reverse/RiderProjects/CSharp/PracticeTasks/Domain/bin/Debug/net6.0/Sorting.dll
+/home/reverse/RiderProjects/CSharp/PracticeTasks/Domain/bin/Debug/net6.0/Sorting.pdb
+/home/reverse/RiderProjects/CSharp/PracticeTasks/Domain/obj/Debug/net6.0/Domain.csproj.CopyComplete

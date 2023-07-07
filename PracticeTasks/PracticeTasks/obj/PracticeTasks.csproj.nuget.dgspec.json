@@ -25,7 +25,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/home/reverse/RiderProjects/CSharp/PracticeTasks/Sorting/Sorting.csproj": {
+                "projectPath": "/home/reverse/RiderProjects/CSharp/PracticeTasks/Sorting/Sorting.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -86,8 +90,69 @@
             "projectReferences": {
               "/home/reverse/RiderProjects/CSharp/PracticeTasks/Domain/Domain.csproj": {
                 "projectPath": "/home/reverse/RiderProjects/CSharp/PracticeTasks/Domain/Domain.csproj"
+              },
+              "/home/reverse/RiderProjects/CSharp/PracticeTasks/Sorting/Sorting.csproj": {
+                "projectPath": "/home/reverse/RiderProjects/CSharp/PracticeTasks/Sorting/Sorting.csproj"
               }
             }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.14, 6.0.14]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.114/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/reverse/RiderProjects/CSharp/PracticeTasks/Sorting/Sorting.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/reverse/RiderProjects/CSharp/PracticeTasks/Sorting/Sorting.csproj",
+        "projectName": "Sorting",
+        "projectPath": "/home/reverse/RiderProjects/CSharp/PracticeTasks/Sorting/Sorting.csproj",
+        "packagesPath": "/home/reverse/.nuget/packages/",
+        "outputPath": "/home/reverse/RiderProjects/CSharp/PracticeTasks/Sorting/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/reverse/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
           }
         },
         "warningProperties": {

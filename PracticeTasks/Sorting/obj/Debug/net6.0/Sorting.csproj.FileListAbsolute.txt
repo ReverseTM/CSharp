@@ -1,0 +1,12 @@
+/home/reverse/RiderProjects/CSharp/PracticeTasks/Sorting/bin/Debug/net6.0/Sorting.deps.json
+/home/reverse/RiderProjects/CSharp/PracticeTasks/Sorting/bin/Debug/net6.0/Sorting.dll
+/home/reverse/RiderProjects/CSharp/PracticeTasks/Sorting/bin/Debug/net6.0/ref/Sorting.dll
+/home/reverse/RiderProjects/CSharp/PracticeTasks/Sorting/bin/Debug/net6.0/Sorting.pdb
+/home/reverse/RiderProjects/CSharp/PracticeTasks/Sorting/obj/Debug/net6.0/Sorting.csproj.AssemblyReference.cache
+/home/reverse/RiderProjects/CSharp/PracticeTasks/Sorting/obj/Debug/net6.0/Sorting.GeneratedMSBuildEditorConfig.editorconfig
+/home/reverse/RiderProjects/CSharp/PracticeTasks/Sorting/obj/Debug/net6.0/Sorting.AssemblyInfoInputs.cache
+/home/reverse/RiderProjects/CSharp/PracticeTasks/Sorting/obj/Debug/net6.0/Sorting.AssemblyInfo.cs
+/home/reverse/RiderProjects/CSharp/PracticeTasks/Sorting/obj/Debug/net6.0/Sorting.csproj.CoreCompileInputs.cache
+/home/reverse/RiderProjects/CSharp/PracticeTasks/Sorting/obj/Debug/net6.0/Sorting.dll
+/home/reverse/RiderProjects/CSharp/PracticeTasks/Sorting/obj/Debug/net6.0/ref/Sorting.dll
+/home/reverse/RiderProjects/CSharp/PracticeTasks/Sorting/obj/Debug/net6.0/Sorting.pdb

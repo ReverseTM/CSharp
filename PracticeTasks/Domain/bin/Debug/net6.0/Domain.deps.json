@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v6.0": {
       "Domain/1.0.0": {
+        "dependencies": {
+          "Sorting": "1.0.0"
+        },
         "runtime": {
           "Domain.dll": {}
+        }
+      },
+      "Sorting/1.0.0": {
+        "runtime": {
+          "Sorting.dll": {}
         }
       }
     }
   },
   "libraries": {
     "Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Sorting/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
