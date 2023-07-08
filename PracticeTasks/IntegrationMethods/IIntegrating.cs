@@ -6,7 +6,7 @@ public interface IIntegrating
         Func<double, double> function,
         double lowerBound,
         double upperBound,
-        int precision);
+        double precision);
 
     string MethodName
     {

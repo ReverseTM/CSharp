@@ -1,0 +1,12 @@
+/home/reverse/RiderProjects/CSharp/PracticeTasks/IntegrationMethods/bin/Debug/net6.0/IntegrationMethods.deps.json
+/home/reverse/RiderProjects/CSharp/PracticeTasks/IntegrationMethods/bin/Debug/net6.0/IntegrationMethods.dll
+/home/reverse/RiderProjects/CSharp/PracticeTasks/IntegrationMethods/bin/Debug/net6.0/ref/IntegrationMethods.dll
+/home/reverse/RiderProjects/CSharp/PracticeTasks/IntegrationMethods/bin/Debug/net6.0/IntegrationMethods.pdb
+/home/reverse/RiderProjects/CSharp/PracticeTasks/IntegrationMethods/obj/Debug/net6.0/IntegrationMethods.csproj.AssemblyReference.cache
+/home/reverse/RiderProjects/CSharp/PracticeTasks/IntegrationMethods/obj/Debug/net6.0/IntegrationMethods.GeneratedMSBuildEditorConfig.editorconfig
+/home/reverse/RiderProjects/CSharp/PracticeTasks/IntegrationMethods/obj/Debug/net6.0/IntegrationMethods.AssemblyInfoInputs.cache
+/home/reverse/RiderProjects/CSharp/PracticeTasks/IntegrationMethods/obj/Debug/net6.0/IntegrationMethods.AssemblyInfo.cs
+/home/reverse/RiderProjects/CSharp/PracticeTasks/IntegrationMethods/obj/Debug/net6.0/IntegrationMethods.csproj.CoreCompileInputs.cache
+/home/reverse/RiderProjects/CSharp/PracticeTasks/IntegrationMethods/obj/Debug/net6.0/IntegrationMethods.dll
+/home/reverse/RiderProjects/CSharp/PracticeTasks/IntegrationMethods/obj/Debug/net6.0/ref/IntegrationMethods.dll
+/home/reverse/RiderProjects/CSharp/PracticeTasks/IntegrationMethods/obj/Debug/net6.0/IntegrationMethods.pdb

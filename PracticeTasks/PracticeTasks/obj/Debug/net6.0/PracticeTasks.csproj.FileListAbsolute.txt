@@ -18,3 +18,5 @@
 /home/reverse/RiderProjects/CSharp/PracticeTasks/PracticeTasks/obj/Debug/net6.0/PracticeTasks.genruntimeconfig.cache
 /home/reverse/RiderProjects/CSharp/PracticeTasks/PracticeTasks/bin/Debug/net6.0/Sorting.dll
 /home/reverse/RiderProjects/CSharp/PracticeTasks/PracticeTasks/bin/Debug/net6.0/Sorting.pdb
+/home/reverse/RiderProjects/CSharp/PracticeTasks/PracticeTasks/bin/Debug/net6.0/IntegrationMethods.dll
+/home/reverse/RiderProjects/CSharp/PracticeTasks/PracticeTasks/bin/Debug/net6.0/IntegrationMethods.pdb

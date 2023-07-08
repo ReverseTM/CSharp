@@ -1,4 +1,5 @@
 ﻿using Domain;
+using IntegrationMethods;
 using Sorting;
 
 namespace PracticeTasks;
@@ -227,7 +228,57 @@ class Program
 
     private static void Task4()
     {
+        double Function(double x) => x / (x - 1);
+
+        var leftRectanglesMethod = new LeftRectanglesMethod();
+        var rightRectanglesMethod = new RightRectanglesMethod();
+        var middleRectanglesMethod = new MiddleRectanglesMethod();
+        var trapezoidalMethod = new TrapezoidalMethod();
+        var parabolaMethod = new ParabolaMethod();
+
+        var iterationsCount = new Dictionary<string, int>();
+        var leadTime = new Dictionary<string, long>();
         
+        const double precision = 0.0000001;
+
+        const int ticksInMilliSecond = 10000;
+        
+        Console.WriteLine($"{leftRectanglesMethod.MethodName}: {leftRectanglesMethod.Сalculate(Function, 4, 10, precision)} ");
+        iterationsCount.Add(leftRectanglesMethod.MethodName, leftRectanglesMethod.IterationsCount);
+        leadTime.Add(leftRectanglesMethod.MethodName, leftRectanglesMethod.Time);
+        
+        Console.WriteLine($"{rightRectanglesMethod.MethodName}: {rightRectanglesMethod.Сalculate(Function, 4, 10, precision)} ");
+        iterationsCount.Add(rightRectanglesMethod.MethodName, rightRectanglesMethod.IterationsCount);
+        leadTime.Add(rightRectanglesMethod.MethodName, rightRectanglesMethod.Time);
+        
+        Console.WriteLine($"{middleRectanglesMethod.MethodName}: {middleRectanglesMethod.Сalculate(Function, 4, 10, precision)} ");
+        iterationsCount.Add(middleRectanglesMethod.MethodName, middleRectanglesMethod.IterationsCount);
+        leadTime.Add(middleRectanglesMethod.MethodName, middleRectanglesMethod.Time);
+        
+        Console.WriteLine($"{trapezoidalMethod.MethodName}: {trapezoidalMethod.Сalculate(Function, 4, 10, precision)} ");
+        iterationsCount.Add(trapezoidalMethod.MethodName, trapezoidalMethod.IterationsCount);
+        leadTime.Add(trapezoidalMethod.MethodName, trapezoidalMethod.Time);
+        
+        Console.WriteLine($"{parabolaMethod.MethodName}: {parabolaMethod.Сalculate(Function, 4, 10, precision)} ");
+        iterationsCount.Add(parabolaMethod.MethodName, parabolaMethod.IterationsCount);
+        leadTime.Add(parabolaMethod.MethodName, parabolaMethod.Time);
+
+        var sortedIterationCount = from element in iterationsCount orderby element.Value ascending select element;
+        var sortedLeadTime = from element in leadTime orderby element.Value ascending select element;
+        
+        Console.WriteLine($"{Environment.NewLine}Number of method iterations");
+        var index = 1;
+        foreach (var item in sortedIterationCount)
+        {
+            Console.WriteLine($"{index}) {item.Key}: {item.Value}");
+        }
+        
+        Console.WriteLine($"{Environment.NewLine}Elapsed time of methods (in ticks)");
+        index = 1;
+        foreach (var item in sortedLeadTime)
+        {
+            Console.WriteLine($"{index}) {item.Key}: {item.Value}");
+        }
     }
     
     static void Main(string[] args)
