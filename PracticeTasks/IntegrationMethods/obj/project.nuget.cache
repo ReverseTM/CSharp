@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "0Sljg1WdczxLbbvxs4lbGsfEGP2yCOuXy22byIpCjPR26ApORHivZW8Cmv7tJggOoTWDH4wWslf9P5fp9LKVkQ==",
+  "success": true,
+  "projectFilePath": "/home/reverse/RiderProjects/CSharp/PracticeTasks/IntegrationMethods/IntegrationMethods.csproj",
+  "expectedPackageFiles": [
+    "/home/reverse/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.14/microsoft.aspnetcore.app.ref.6.0.14.nupkg.sha512"
+  ],
+  "logs": []
+}

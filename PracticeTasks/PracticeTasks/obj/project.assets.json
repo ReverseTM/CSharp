@@ -15,6 +15,16 @@
           "bin/placeholder/Domain.dll": {}
         }
       },
+      "IntegrationMethods/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/IntegrationMethods.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/IntegrationMethods.dll": {}
+        }
+      },
       "Sorting/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -33,6 +43,11 @@
       "path": "../Domain/Domain.csproj",
       "msbuildProject": "../Domain/Domain.csproj"
     },
+    "IntegrationMethods/1.0.0": {
+      "type": "project",
+      "path": "../IntegrationMethods/IntegrationMethods.csproj",
+      "msbuildProject": "../IntegrationMethods/IntegrationMethods.csproj"
+    },
     "Sorting/1.0.0": {
       "type": "project",
       "path": "../Sorting/Sorting.csproj",
@@ -42,6 +57,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Domain >= 1.0.0",
+      "IntegrationMethods >= 1.0.0",
       "Sorting >= 1.0.0"
     ]
   },
@@ -72,6 +88,9 @@
           "projectReferences": {
             "/home/reverse/RiderProjects/CSharp/PracticeTasks/Domain/Domain.csproj": {
               "projectPath": "/home/reverse/RiderProjects/CSharp/PracticeTasks/Domain/Domain.csproj"
+            },
+            "/home/reverse/RiderProjects/CSharp/PracticeTasks/IntegrationMethods/IntegrationMethods.csproj": {
+              "projectPath": "/home/reverse/RiderProjects/CSharp/PracticeTasks/IntegrationMethods/IntegrationMethods.csproj"
             },
             "/home/reverse/RiderProjects/CSharp/PracticeTasks/Sorting/Sorting.csproj": {
               "projectPath": "/home/reverse/RiderProjects/CSharp/PracticeTasks/Sorting/Sorting.csproj"

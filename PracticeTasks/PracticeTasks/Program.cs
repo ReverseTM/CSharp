@@ -224,11 +224,17 @@ class Program
             Console.WriteLine(ex.Message);
         }
     }
+
+    private static void Task4()
+    {
+        
+    }
     
     static void Main(string[] args)
     {
         //Task1();
         //Task2();
-        Task3();
+        //Task3();
+        Task4();
     }
 }
