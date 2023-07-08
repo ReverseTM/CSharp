@@ -8,5 +8,5 @@ public abstract class ASort<T>
         Descending
     }
 
-    public abstract T[] Sort(T[]? collection, SortingMode mode);
+    public abstract T[] Sort(T[]? collection, SortingMode mode, Comparison<T> comparison);
 }

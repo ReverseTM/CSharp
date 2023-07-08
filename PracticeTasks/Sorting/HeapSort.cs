@@ -5,49 +5,55 @@ public sealed class HeapSort<T> :
 {
     public override T[] Sort(
         T[]? collection,
-        SortingMode mode)
+        SortingMode mode,
+        Comparison<T> comparison)
     {
         if (collection == null) throw new ArgumentNullException(nameof(collection));
         
-        var n = collection.Length;
+        var size = collection.Length;
         
-        for (var i = n / 2 - 1; i >= 0; i--) Heapify(collection, n, i, mode);
+        for (var i = size / 2 - 1; i >= 0; i--) Heapify(collection, size, i, mode, comparison);
         
-        for (var i = n - 1; i >= 0; i--)
+        for (var i = size - 1; i >= 0; i--)
         {
             (collection[0], collection[i]) = (collection[i], collection[0]);
-            Heapify(collection, i, 0, mode);
+            Heapify(collection, i, 0, mode, comparison);
         }
 
         return collection;
     }
     
-    private static void Heapify(T[] collection, int n, int i, SortingMode mode)
+    private static void Heapify(
+        T[] collection,
+        int size,
+        int root,
+        SortingMode mode,
+        Comparison<T> comparison)
     {
-        var maxOrMin = i;
+        var maxOrMin = root;
         
-        var left = 2 * i + 1;
-        var right = 2 * i + 2;
+        var left = 2 * root + 1;
+        var right = 2 * root + 2;
 
-        if (left < n && (mode == SortingMode.Ascending
-                ? (dynamic?)collection[left] > collection[maxOrMin]
-                : (dynamic?)collection[left] < collection[maxOrMin]))
+        if (left < size && (mode == SortingMode.Ascending
+                ? comparison(collection[left], collection[maxOrMin]) > 0
+                : comparison(collection[left], collection[maxOrMin]) < 0))
         {
             maxOrMin = left;
         }
 
-        if (right < n && (mode == SortingMode.Ascending
-                ? (dynamic?)collection[right] > collection[maxOrMin]
-                : (dynamic?)collection[right] < collection[maxOrMin]))
+        if (right < size && (mode == SortingMode.Ascending
+                ? comparison(collection[right], collection[maxOrMin]) > 0
+                : comparison(collection[right], collection[maxOrMin]) < 0))
         {
             maxOrMin = right;
         }
 
-        if (maxOrMin != i)
+        if (maxOrMin != root)
         {
-            (collection[i], collection[maxOrMin]) = (collection[maxOrMin], collection[i]);
+            (collection[root], collection[maxOrMin]) = (collection[maxOrMin], collection[root]);
             
-            Heapify(collection, n, maxOrMin, mode);
+            Heapify(collection, size, maxOrMin, mode, comparison);
         }
     }
 }

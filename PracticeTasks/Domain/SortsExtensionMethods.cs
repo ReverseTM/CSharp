@@ -1,3 +1,4 @@
+using System.Runtime.Intrinsics.X86;
 using Sorting;
 namespace Domain;
 public static class SortsExtensionMethods
@@ -7,7 +8,9 @@ public static class SortsExtensionMethods
         ASort<T>.SortingMode mode,
         ASort<T> sortAlgorithm) where T : IComparable<T>
     {
-        return sortAlgorithm.Sort(collection, mode);
+        int Comparison(T x, T y) => x.CompareTo(y);
+
+        return sortAlgorithm.Sort(collection, mode, Comparison);
     }
 
     public static T[] Sort<T>(this T[] collection,
@@ -15,7 +18,7 @@ public static class SortsExtensionMethods
         ASort<T> sortAlgorithm,
         IComparer<T> comparer)
     {
-        return sortAlgorithm.Sort(collection, mode);
+        return sortAlgorithm.Sort(collection, mode, comparer.Compare);
     }
 
     public static T[] Sort<T>(
@@ -24,7 +27,7 @@ public static class SortsExtensionMethods
         ASort<T> sortAlgorithm,
         Comparer<T> comparer)
     {
-        return sortAlgorithm.Sort(collection, mode);
+        return sortAlgorithm.Sort(collection, mode, comparer.Compare);
     }
 
     public static T[] Sort<T>(
@@ -33,6 +36,6 @@ public static class SortsExtensionMethods
         ASort<T> sortAlgorithm,
         Comparison<T> comparison)
     {
-        return sortAlgorithm.Sort(collection, mode);
+        return sortAlgorithm.Sort(collection, mode, comparison);
     }
 }

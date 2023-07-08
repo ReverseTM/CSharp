@@ -5,7 +5,8 @@ public sealed class SelectionSort<T> :
 {
     public override T[] Sort(
         T[]? collection,
-        SortingMode mode)
+        SortingMode mode,
+        Comparison<T> comparison)
     {
         if (collection == null) throw new ArgumentNullException(nameof(collection));
 
@@ -18,8 +19,8 @@ public sealed class SelectionSort<T> :
             for (var j = i + 1; j < lenght; j++)
             {
                 if (mode == SortingMode.Ascending
-                        ? collection[j] < (dynamic?)collection[currentIndex]
-                        : collection[j] > (dynamic?)collection[currentIndex])
+                        ? comparison(collection[j], collection[currentIndex]) < 0
+                        : comparison(collection[j], collection[currentIndex]) > 0)
                 {
                     currentIndex = j;
                 }

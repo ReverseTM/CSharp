@@ -3,7 +3,10 @@
 public sealed class InsertionSort<T> : 
     ASort<T>
 {
-    public override T[] Sort(T[]? collection, SortingMode mode)
+    public override T[] Sort(
+        T[]? collection,
+        SortingMode mode,
+        Comparison<T> comparison)
     {
         if (collection == null) throw new ArgumentNullException(nameof(collection));
         
@@ -15,8 +18,8 @@ public sealed class InsertionSort<T> :
             
             while (index > 0 
                    && (mode == SortingMode.Ascending
-                       ? (dynamic?)currentNumber < collection[index - 1]
-                       : (dynamic?)currentNumber > collection[index - 1]))
+                       ? comparison(currentNumber, collection[index - 1]) < 0
+                       : comparison(currentNumber, collection[index - 1]) > 0))
             {
                 collection[index] = collection[index - 1]; 
                 index -= 1;

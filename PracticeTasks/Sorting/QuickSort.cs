@@ -5,25 +5,27 @@ public sealed class QuickSort<T> :
 {
     public override T[] Sort(
         T[]? collection,
-        SortingMode mode)
+        SortingMode mode,
+        Comparison<T> comparison)
     {
         if (collection == null) throw new ArgumentNullException(nameof(collection));
 
-        return QSort(collection, 0, collection.Length - 1, mode);
+        return QSort(collection, 0, collection.Length - 1, mode, comparison);
     }
     
     private static T[] QSort(
         T[] collection,
         int minIndex,
         int maxIndex,
-        SortingMode mode)
+        SortingMode mode,
+        Comparison<T> comparison)
     {
         if (minIndex >= maxIndex) return collection;
         
 
-        var pivotIndex = FindPivot(collection, minIndex, maxIndex, mode);
-        QSort(collection, minIndex, pivotIndex - 1, mode);
-        QSort(collection, pivotIndex + 1, maxIndex, mode);
+        var pivotIndex = FindPivot(collection, minIndex, maxIndex, mode, comparison);
+        QSort(collection, minIndex, pivotIndex - 1, mode, comparison);
+        QSort(collection, pivotIndex + 1, maxIndex, mode, comparison);
 
         return collection;
     }
@@ -32,15 +34,16 @@ public sealed class QuickSort<T> :
         T[] collection,
         int minIndex,
         int maxIndex,
-        SortingMode mode)
+        SortingMode mode,
+        Comparison<T> comparison)
     {
         var pivot = minIndex - 1;
         
         for (var i = minIndex; i < maxIndex; i++)
         {
             if (mode == SortingMode.Ascending 
-                    ? (dynamic?)collection[i] < collection[maxIndex]
-                    : (dynamic?)collection[i] > collection[maxIndex])
+                    ? comparison(collection[i], collection[maxIndex]) < 0
+                    : comparison(collection[i], collection[maxIndex]) > 0)
             {
                 pivot++;
                 (collection[pivot], collection[i]) = (collection[i], collection[pivot]);

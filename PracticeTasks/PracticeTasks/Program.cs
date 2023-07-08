@@ -142,11 +142,34 @@ class Program
 
         #region TASK3
 
-        var numbers = new[] { new IntAndString(1, "123"), new IntAndString(1, "234"), new IntAndString(1, "345") }.Sort(ASort<IntAndString>.SortingMode.Descending, new InsertionSort<IntAndString>());
-
-        foreach (var item in numbers)
+        try
         {
-            Console.Write($"{item} ");
+            Comparison<IntAndString> cmp = IntAndStringComparer.Compare;
+
+            var numbers = new[]
+            {
+                new IntAndString(3, "123"), new IntAndString(1, "234"), new IntAndString(2, "345"),
+                new IntAndString(1, "456")
+            };
+
+            numbers.Sort(ASort<IntAndString>.SortingMode.Ascending, new MergeSort<IntAndString>());
+
+            foreach (var item in numbers)
+            {
+                Console.Write($"{item} ");
+            }
+        }
+        catch (ArgumentNullException ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+        catch (ArgumentException ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
         }
 
         #endregion TASK3
