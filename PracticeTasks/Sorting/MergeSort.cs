@@ -41,7 +41,7 @@ public sealed class MergeSort<T> :
     {
         var left = lowIndex;
         var right = middleIndex + 1;
-        var tempArray = new int[highIndex - lowIndex + 1];
+        var tempArray = new T[highIndex - lowIndex + 1];
         var index = 0;
 
         while ((left <= middleIndex) && (right <= highIndex))
@@ -50,12 +50,12 @@ public sealed class MergeSort<T> :
                     ? comparison(collection[left], collection[right]) < 0 
                     : comparison(collection[left], collection[right]) > 0)
             {
-                tempArray[index] = (dynamic?)collection[left];
+                tempArray[index] = collection[left];
                 left++;
             }
             else
             {
-                tempArray[index] = (dynamic?)collection[right];
+                tempArray[index] = collection[right];
                 right++;
             }
 
@@ -64,19 +64,19 @@ public sealed class MergeSort<T> :
 
         for (var i = left; i <= middleIndex; i++)
         {
-            tempArray[index] = (dynamic?)collection[i];
+            tempArray[index] = collection[i];
             index++;
         }
 
         for (var i = right; i <= highIndex; i++)
         {
-            tempArray[index] = (dynamic?)collection[i];
+            tempArray[index] = collection[i];
             index++;
         }
 
         for (var i = 0; i < tempArray.Length; i++)
         {
-            collection[lowIndex + i] = (dynamic)tempArray[i];
+            collection[lowIndex + i] = tempArray[i];
         }
     }
 }

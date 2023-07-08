@@ -3,14 +3,14 @@ namespace Domain;
 public static class EnumerableExtensionMethods
 {
 
-    private static IEnumerable<IEnumerable<T>> GetAllCombination<T>(this IEnumerable<T>? collection, int k)
+    private static IEnumerable<IEnumerable<T>> GetAllCombination<T>(this IEnumerable<T> collection, int k)
     {
         return k == 0 ? new[] { Array.Empty<T>() } :
             collection.SelectMany((e, i) =>
                 collection.Skip(i).GetAllCombination(k - 1).Select(c => (new[] {e}).Concat(c)));
     }
 
-    public static IEnumerable<IEnumerable<T>> GenCombination<T>(this IEnumerable<T> collection, int k, IEqualityComparer<T> comparer)
+    public static IEnumerable<IEnumerable<T>> GenCombination<T>(this IEnumerable<T> collection, int k, IEqualityComparer<T>? comparer)
     {
         if (collection == null) throw new ArgumentNullException(nameof(collection));
         if (comparer == null) throw new ArgumentNullException(nameof(comparer));
@@ -23,7 +23,7 @@ public static class EnumerableExtensionMethods
         }
     }
     
-    public static IEnumerable<IEnumerable<T>> GenSubset<T>(this IEnumerable<T>? collection, IEqualityComparer<T> comparer)
+    public static IEnumerable<IEnumerable<T>> GenSubset<T>(this IEnumerable<T>? collection, IEqualityComparer<T>? comparer)
     {
         if (collection == null) throw new ArgumentNullException(nameof(collection));
         if (comparer == null) throw new ArgumentNullException(nameof(comparer));
@@ -42,7 +42,7 @@ public static class EnumerableExtensionMethods
         }
     }
 
-    private static IEnumerable<IEnumerable<T>> GetAllPermutation<T>(this IEnumerable<T>? collection)
+    private static IEnumerable<IEnumerable<T>> GetAllPermutation<T>(this IEnumerable<T> collection)
     {
         if (collection.Count() == 1)
             return new[] { collection };            
@@ -61,56 +61,6 @@ public static class EnumerableExtensionMethods
         {
             yield return item;
         }
-        
-        // var size = collection.Count();
-        // var a = new T[size];
-        // var p = new T[size];
-        //
-        // var yieldRet = new T[size];
-        //
-        // var list = new List<T>(collection);
-        //
-        // int i, j, tmp;
-        //
-        // for (i = 0; i < size; i++)
-        // {
-        //     a[i] = i + 1; 
-        //     p[i] = 0; 
-        // }
-        //
-        // for (var x = 0; x < size; x++)
-        // {
-        //     yieldRet[x] = list[ a[x] - 1 ];
-        // }
-        //
-        // yield return yieldRet;
-        //
-        // i = 1;
-        //
-        // while (i < size)
-        // {
-        //     if (p[i] < i)
-        //     {
-        //         j = i % 2 * p[i]; 
-        //         tmp = a[j];
-        //         a[j] = a[i];
-        //         a[i] = tmp;
-        //
-        //         for (var x = 0; x < size; x++)
-        //         {
-        //             yieldRet[x] = list[ a[x] - 1 ];
-        //         }
-        //         yield return yieldRet;
-        //
-        //         p[i]++; 
-        //         i = 1;
-        //     }
-        //     else
-        //     {
-        //         p[i] = 0; 
-        //         i++; 
-        //     } 
-        // } 
     }
 
     private static void ThrowIfNotDistinct<T>(
