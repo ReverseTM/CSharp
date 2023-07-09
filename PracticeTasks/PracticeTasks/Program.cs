@@ -1,6 +1,7 @@
 ﻿using Domain;
-using IntegrationMethods;
 using Sorting;
+using EnumerableExtensions;
+using IntegrationMethods;
 
 namespace PracticeTasks;
 
@@ -242,43 +243,63 @@ class Program
         const double precision = 0.0000001;
 
         const int ticksInMilliSecond = 10000;
-        
-        Console.WriteLine($"{leftRectanglesMethod.MethodName}: {leftRectanglesMethod.Сalculate(Function, 4, 10, precision)} ");
-        iterationsCount.Add(leftRectanglesMethod.MethodName, leftRectanglesMethod.IterationsCount);
-        leadTime.Add(leftRectanglesMethod.MethodName, leftRectanglesMethod.Time);
-        
-        Console.WriteLine($"{rightRectanglesMethod.MethodName}: {rightRectanglesMethod.Сalculate(Function, 4, 10, precision)} ");
-        iterationsCount.Add(rightRectanglesMethod.MethodName, rightRectanglesMethod.IterationsCount);
-        leadTime.Add(rightRectanglesMethod.MethodName, rightRectanglesMethod.Time);
-        
-        Console.WriteLine($"{middleRectanglesMethod.MethodName}: {middleRectanglesMethod.Сalculate(Function, 4, 10, precision)} ");
-        iterationsCount.Add(middleRectanglesMethod.MethodName, middleRectanglesMethod.IterationsCount);
-        leadTime.Add(middleRectanglesMethod.MethodName, middleRectanglesMethod.Time);
-        
-        Console.WriteLine($"{trapezoidalMethod.MethodName}: {trapezoidalMethod.Сalculate(Function, 4, 10, precision)} ");
-        iterationsCount.Add(trapezoidalMethod.MethodName, trapezoidalMethod.IterationsCount);
-        leadTime.Add(trapezoidalMethod.MethodName, trapezoidalMethod.Time);
-        
-        Console.WriteLine($"{parabolaMethod.MethodName}: {parabolaMethod.Сalculate(Function, 4, 10, precision)} ");
-        iterationsCount.Add(parabolaMethod.MethodName, parabolaMethod.IterationsCount);
-        leadTime.Add(parabolaMethod.MethodName, parabolaMethod.Time);
 
-        var sortedIterationCount = from element in iterationsCount orderby element.Value ascending select element;
-        var sortedLeadTime = from element in leadTime orderby element.Value ascending select element;
-        
-        Console.WriteLine($"{Environment.NewLine}Number of method iterations");
-        var index = 1;
-        foreach (var item in sortedIterationCount)
+        try
         {
-            Console.WriteLine($"{index}) {item.Key}: {item.Value}");
+            Console.WriteLine(
+                $"{leftRectanglesMethod.MethodName}: {leftRectanglesMethod.Сalculate(Function, 4, 10, precision)} ");
+            iterationsCount.Add(leftRectanglesMethod.MethodName, leftRectanglesMethod.IterationsCount);
+            leadTime.Add(leftRectanglesMethod.MethodName, leftRectanglesMethod.Time);
+
+            Console.WriteLine(
+                $"{rightRectanglesMethod.MethodName}: {rightRectanglesMethod.Сalculate(Function, 4, 10, precision)} ");
+            iterationsCount.Add(rightRectanglesMethod.MethodName, rightRectanglesMethod.IterationsCount);
+            leadTime.Add(rightRectanglesMethod.MethodName, rightRectanglesMethod.Time);
+
+            Console.WriteLine(
+                $"{middleRectanglesMethod.MethodName}: {middleRectanglesMethod.Сalculate(Function, 4, 10, precision)} ");
+            iterationsCount.Add(middleRectanglesMethod.MethodName, middleRectanglesMethod.IterationsCount);
+            leadTime.Add(middleRectanglesMethod.MethodName, middleRectanglesMethod.Time);
+
+            Console.WriteLine(
+                $"{trapezoidalMethod.MethodName}: {trapezoidalMethod.Сalculate(Function, 4, 10, precision)} ");
+            iterationsCount.Add(trapezoidalMethod.MethodName, trapezoidalMethod.IterationsCount);
+            leadTime.Add(trapezoidalMethod.MethodName, trapezoidalMethod.Time);
+
+            Console.WriteLine($"{parabolaMethod.MethodName}: {parabolaMethod.Сalculate(Function, 4, 10, precision)} ");
+            iterationsCount.Add(parabolaMethod.MethodName, parabolaMethod.IterationsCount);
+            leadTime.Add(parabolaMethod.MethodName, parabolaMethod.Time);
+
+            var sortedIterationCount = from element in iterationsCount orderby element.Value ascending select element;
+            var sortedLeadTime = from element in leadTime orderby element.Value ascending select element;
+
+            Console.WriteLine($"{Environment.NewLine}Number of method iterations");
+            var index = 1;
+            foreach (var item in sortedIterationCount)
+            {
+                Console.WriteLine($"{index}) {item.Key}: {item.Value}");
+            }
+
+            Console.WriteLine($"{Environment.NewLine}Elapsed time of methods (in ticks)");
+            index = 1;
+            foreach (var item in sortedLeadTime)
+            {
+                Console.WriteLine($"{index}) {item.Key}: {item.Value}");
+            }
         }
-        
-        Console.WriteLine($"{Environment.NewLine}Elapsed time of methods (in ticks)");
-        index = 1;
-        foreach (var item in sortedLeadTime)
+        catch (ArgumentNullException ex)
         {
-            Console.WriteLine($"{index}) {item.Key}: {item.Value}");
+            Console.WriteLine(ex.Message);
         }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+    }
+
+    private static void Task5()
+    {
+        
     }
     
     static void Main(string[] args)
@@ -286,6 +307,8 @@ class Program
         //Task1();
         //Task2();
         //Task3();
-        Task4();
+        //Task4();
+        
+        Task5();
     }
 }

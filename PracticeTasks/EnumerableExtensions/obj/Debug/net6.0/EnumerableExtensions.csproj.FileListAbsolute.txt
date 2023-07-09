@@ -1,0 +1,12 @@
+/home/reverse/RiderProjects/CSharp/PracticeTasks/EnumerableExtensions/bin/Debug/net6.0/EnumerableExtensions.deps.json
+/home/reverse/RiderProjects/CSharp/PracticeTasks/EnumerableExtensions/bin/Debug/net6.0/EnumerableExtensions.dll
+/home/reverse/RiderProjects/CSharp/PracticeTasks/EnumerableExtensions/bin/Debug/net6.0/ref/EnumerableExtensions.dll
+/home/reverse/RiderProjects/CSharp/PracticeTasks/EnumerableExtensions/bin/Debug/net6.0/EnumerableExtensions.pdb
+/home/reverse/RiderProjects/CSharp/PracticeTasks/EnumerableExtensions/obj/Debug/net6.0/EnumerableExtensions.csproj.AssemblyReference.cache
+/home/reverse/RiderProjects/CSharp/PracticeTasks/EnumerableExtensions/obj/Debug/net6.0/EnumerableExtensions.GeneratedMSBuildEditorConfig.editorconfig
+/home/reverse/RiderProjects/CSharp/PracticeTasks/EnumerableExtensions/obj/Debug/net6.0/EnumerableExtensions.AssemblyInfoInputs.cache
+/home/reverse/RiderProjects/CSharp/PracticeTasks/EnumerableExtensions/obj/Debug/net6.0/EnumerableExtensions.AssemblyInfo.cs
+/home/reverse/RiderProjects/CSharp/PracticeTasks/EnumerableExtensions/obj/Debug/net6.0/EnumerableExtensions.csproj.CoreCompileInputs.cache
+/home/reverse/RiderProjects/CSharp/PracticeTasks/EnumerableExtensions/obj/Debug/net6.0/EnumerableExtensions.dll
+/home/reverse/RiderProjects/CSharp/PracticeTasks/EnumerableExtensions/obj/Debug/net6.0/ref/EnumerableExtensions.dll
+/home/reverse/RiderProjects/CSharp/PracticeTasks/EnumerableExtensions/obj/Debug/net6.0/EnumerableExtensions.pdb

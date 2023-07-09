@@ -20,3 +20,7 @@
 /home/reverse/RiderProjects/CSharp/PracticeTasks/PracticeTasks/bin/Debug/net6.0/Sorting.pdb
 /home/reverse/RiderProjects/CSharp/PracticeTasks/PracticeTasks/bin/Debug/net6.0/IntegrationMethods.dll
 /home/reverse/RiderProjects/CSharp/PracticeTasks/PracticeTasks/bin/Debug/net6.0/IntegrationMethods.pdb
+/home/reverse/RiderProjects/CSharp/PracticeTasks/PracticeTasks/bin/Debug/net6.0/EnumerableExtensions.dll
+/home/reverse/RiderProjects/CSharp/PracticeTasks/PracticeTasks/bin/Debug/net6.0/List.dll
+/home/reverse/RiderProjects/CSharp/PracticeTasks/PracticeTasks/bin/Debug/net6.0/EnumerableExtensions.pdb
+/home/reverse/RiderProjects/CSharp/PracticeTasks/PracticeTasks/bin/Debug/net6.0/List.pdb

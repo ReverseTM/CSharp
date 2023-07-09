@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "dPoFPSy1TTSu+XDDm3kn9+MpYf8TLGpT3+Vo4iltLz9z5qZoo8h4vw/uHw23dFzgjhkKalMKcpKMZtTgcxyXbQ==",
+  "success": true,
+  "projectFilePath": "/home/reverse/RiderProjects/CSharp/PracticeTasks/EnumerableExtensions/EnumerableExtensions.csproj",
+  "expectedPackageFiles": [
+    "/home/reverse/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.14/microsoft.aspnetcore.app.ref.6.0.14.nupkg.sha512"
+  ],
+  "logs": []
+}

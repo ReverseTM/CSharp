@@ -1,4 +1,4 @@
-namespace Domain;
+namespace EnumerableExtensions;
 
 public class ElementsEqualityComparer<T>:
     IEqualityComparer<T>

@@ -1,4 +1,4 @@
-namespace Domain;
+namespace Sorting;
 
 public sealed class IntAndStringComparer :
     IComparer<IntAndString>

@@ -1,6 +1,4 @@
-using Domain;
-
-namespace Domain;
+namespace Sorting;
 
 public sealed class IntAndString :
     IComparable,

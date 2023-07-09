@@ -15,6 +15,16 @@
           "bin/placeholder/Domain.dll": {}
         }
       },
+      "EnumerableExtensions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/EnumerableExtensions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EnumerableExtensions.dll": {}
+        }
+      },
       "IntegrationMethods/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -23,6 +33,16 @@
         },
         "runtime": {
           "bin/placeholder/IntegrationMethods.dll": {}
+        }
+      },
+      "List/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/List.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/List.dll": {}
         }
       },
       "Sorting/1.0.0": {
@@ -43,10 +63,20 @@
       "path": "../Domain/Domain.csproj",
       "msbuildProject": "../Domain/Domain.csproj"
     },
+    "EnumerableExtensions/1.0.0": {
+      "type": "project",
+      "path": "../EnumerableExtensions/EnumerableExtensions.csproj",
+      "msbuildProject": "../EnumerableExtensions/EnumerableExtensions.csproj"
+    },
     "IntegrationMethods/1.0.0": {
       "type": "project",
       "path": "../IntegrationMethods/IntegrationMethods.csproj",
       "msbuildProject": "../IntegrationMethods/IntegrationMethods.csproj"
+    },
+    "List/1.0.0": {
+      "type": "project",
+      "path": "../List/List.csproj",
+      "msbuildProject": "../List/List.csproj"
     },
     "Sorting/1.0.0": {
       "type": "project",
@@ -57,7 +87,9 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Domain >= 1.0.0",
+      "EnumerableExtensions >= 1.0.0",
       "IntegrationMethods >= 1.0.0",
+      "List >= 1.0.0",
       "Sorting >= 1.0.0"
     ]
   },
@@ -89,8 +121,14 @@
             "/home/reverse/RiderProjects/CSharp/PracticeTasks/Domain/Domain.csproj": {
               "projectPath": "/home/reverse/RiderProjects/CSharp/PracticeTasks/Domain/Domain.csproj"
             },
+            "/home/reverse/RiderProjects/CSharp/PracticeTasks/EnumerableExtensions/EnumerableExtensions.csproj": {
+              "projectPath": "/home/reverse/RiderProjects/CSharp/PracticeTasks/EnumerableExtensions/EnumerableExtensions.csproj"
+            },
             "/home/reverse/RiderProjects/CSharp/PracticeTasks/IntegrationMethods/IntegrationMethods.csproj": {
               "projectPath": "/home/reverse/RiderProjects/CSharp/PracticeTasks/IntegrationMethods/IntegrationMethods.csproj"
+            },
+            "/home/reverse/RiderProjects/CSharp/PracticeTasks/List/List.csproj": {
+              "projectPath": "/home/reverse/RiderProjects/CSharp/PracticeTasks/List/List.csproj"
             },
             "/home/reverse/RiderProjects/CSharp/PracticeTasks/Sorting/Sorting.csproj": {
               "projectPath": "/home/reverse/RiderProjects/CSharp/PracticeTasks/Sorting/Sorting.csproj"

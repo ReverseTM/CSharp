@@ -9,7 +9,9 @@
       "PracticeTasks/1.0.0": {
         "dependencies": {
           "Domain": "1.0.0",
+          "EnumerableExtensions": "1.0.0",
           "IntegrationMethods": "1.0.0",
+          "List": "1.0.0",
           "Sorting": "1.0.0"
         },
         "runtime": {
@@ -24,9 +26,19 @@
           "Domain.dll": {}
         }
       },
+      "EnumerableExtensions/1.0.0": {
+        "runtime": {
+          "EnumerableExtensions.dll": {}
+        }
+      },
       "IntegrationMethods/1.0.0": {
         "runtime": {
           "IntegrationMethods.dll": {}
+        }
+      },
+      "List/1.0.0": {
+        "runtime": {
+          "List.dll": {}
         }
       },
       "Sorting/1.0.0": {
@@ -47,7 +59,17 @@
       "serviceable": false,
       "sha512": ""
     },
+    "EnumerableExtensions/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "IntegrationMethods/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "List/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

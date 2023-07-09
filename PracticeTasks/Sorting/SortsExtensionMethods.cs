@@ -1,6 +1,4 @@
-using System.Runtime.Intrinsics.X86;
-using Sorting;
-namespace Domain;
+namespace Sorting;
 public static class SortsExtensionMethods
 {
     public static T[] Sort<T>(

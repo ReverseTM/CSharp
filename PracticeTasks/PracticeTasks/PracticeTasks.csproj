@@ -9,7 +9,9 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Domain\Domain.csproj" />
+      <ProjectReference Include="..\EnumerableExtensions\EnumerableExtensions.csproj" />
       <ProjectReference Include="..\IntegrationMethods\IntegrationMethods.csproj" />
+      <ProjectReference Include="..\List\List.csproj" />
       <ProjectReference Include="..\Sorting\Sorting.csproj" />
     </ItemGroup>
 

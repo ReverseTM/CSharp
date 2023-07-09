@@ -1,0 +1,12 @@
+/home/reverse/RiderProjects/CSharp/PracticeTasks/List/bin/Debug/net6.0/List.deps.json
+/home/reverse/RiderProjects/CSharp/PracticeTasks/List/bin/Debug/net6.0/List.dll
+/home/reverse/RiderProjects/CSharp/PracticeTasks/List/bin/Debug/net6.0/ref/List.dll
+/home/reverse/RiderProjects/CSharp/PracticeTasks/List/bin/Debug/net6.0/List.pdb
+/home/reverse/RiderProjects/CSharp/PracticeTasks/List/obj/Debug/net6.0/List.csproj.AssemblyReference.cache
+/home/reverse/RiderProjects/CSharp/PracticeTasks/List/obj/Debug/net6.0/List.GeneratedMSBuildEditorConfig.editorconfig
+/home/reverse/RiderProjects/CSharp/PracticeTasks/List/obj/Debug/net6.0/List.AssemblyInfoInputs.cache
+/home/reverse/RiderProjects/CSharp/PracticeTasks/List/obj/Debug/net6.0/List.AssemblyInfo.cs
+/home/reverse/RiderProjects/CSharp/PracticeTasks/List/obj/Debug/net6.0/List.csproj.CoreCompileInputs.cache
+/home/reverse/RiderProjects/CSharp/PracticeTasks/List/obj/Debug/net6.0/List.dll
+/home/reverse/RiderProjects/CSharp/PracticeTasks/List/obj/Debug/net6.0/ref/List.dll
+/home/reverse/RiderProjects/CSharp/PracticeTasks/List/obj/Debug/net6.0/List.pdb
