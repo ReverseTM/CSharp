@@ -2,6 +2,7 @@
 using Sorting;
 using EnumerableExtensions;
 using IntegrationMethods;
+using List;
 
 namespace PracticeTasks;
 
@@ -299,7 +300,27 @@ class Program
 
     private static void Task5()
     {
-        
+        try
+        {
+            var list = new List.LinkedList<int>();
+
+            list.PushFront(1).PushFront(2).PushBack(3).InsertByIndex(4, 1);
+
+            Console.WriteLine(list.First);
+            Console.WriteLine(list.Last);
+        }
+        catch (ArgumentNullException ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+        catch (ArgumentException ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
     }
     
     static void Main(string[] args)
