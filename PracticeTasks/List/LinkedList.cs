@@ -65,45 +65,178 @@ public sealed class LinkedList<T>
         return this;
     }
 
-    public LinkedList<T> InsertByIndex(T? data, int index)
+    public LinkedList<T> InsertAt(T? data, int index)
     {
         if (data == null) throw new ArgumentNullException(nameof(data));
 
-        if (index > _count) throw new ArgumentException("Index out of bounds" , nameof(index));
+        if (index < 0 || index > _count) throw new ArgumentException("Index out of bounds" , nameof(index));
 
         var currentNode = _first;
         LinkedListNode<T>? previousNode = null;
 
-        for (var i = 0; i < index && currentNode != null; i++)
+        for (var i = 0; i < index; i++)
         {
             previousNode = currentNode;
-            currentNode = currentNode.Next;
+            currentNode = currentNode!.Next;
         }
 
         currentNode = currentNode == null ? new LinkedListNode<T>(data) : new LinkedListNode<T>(data) {Next = currentNode};
 
-        if (previousNode == null) _first = _last = currentNode;
+        if (previousNode == null) _first = currentNode;
         else previousNode.Next = currentNode;
+
+        if (index == _count) _last = currentNode;
         
         _count++;
         
         return this;
     }
 
-    public LinkedList<T> PopFront(T? data)
+    public LinkedList<T> PopFront()
     {
-        throw new NotImplementedException();
+        if (_count == 0) throw new IndexOutOfRangeException("List is empty");
+
+        _first = _count == 1 ? _last = null : _first!.Next;
+
+        _count--;
+        
+        return this;
+}
+    
+    public LinkedList<T> PopBack()
+    {
+        if (_count == 0) throw new IndexOutOfRangeException("List is empty");
+
+        if (_count == 1) _first = _last = null;
+
+        else
+        {
+            var currentNode = _first;
+            LinkedListNode<T>? previousNode = null;
+
+            while (!currentNode!.Next!.Equals(_last))
+            {
+                previousNode = currentNode;
+                currentNode = currentNode.Next;
+            }
+
+            currentNode.Next = null;
+            _last = currentNode;
+
+            if (previousNode == null) _first = _last;
+            else previousNode.Next = _last;    
+        }
+
+        _count--;
+        
+        return this;
     }
     
-    public LinkedList<T> PopBack(T? data)
+    public LinkedList<T> RemoveAt(int index)
     {
-        throw new NotImplementedException();
+        if (index < 0 || index >= _count) throw new ArgumentException("Index out of bounds" , nameof(index));
+        
+        if (_count == 0) throw new IndexOutOfRangeException("List is empty");
+
+        if (_count == 1) _first = _last = null;
+
+        else
+        {
+            var currentNode = _first;
+            LinkedListNode<T>? previousNode = null;
+
+            for (var i = 0; i < index; i++)
+            {
+                previousNode = currentNode;
+                currentNode = currentNode!.Next;
+            }
+
+            if (previousNode == null) _first = _first!.Next;
+            else previousNode.Next = currentNode!.Next;
+            
+            if (index == _count - 1) _last = previousNode;
+        }
+
+        _count--;
+        
+        return this;
     }
-    
-    public LinkedList<T> RemoveByIndex(T? data, int index)
+
+    private LinkedList<T> FindAt(out T findValue, int index)
     {
-        throw new NotImplementedException();
+        if (index < 0 || index >= _count) throw new ArgumentException("Index out of bounds" , nameof(index));
+        
+        if (_count == 0) throw new IndexOutOfRangeException("List is empty");
+
+        var currentNode = _first;
+        
+        while (index > 0)
+        {
+            currentNode = currentNode!.Next;
+            index--;
+        }
+
+        findValue = currentNode!.Data;
+
+        return this;
+    }
+
+    private LinkedList<T> UpdateAt(T? data, int index)
+    {
+        if (data == null) throw new ArgumentNullException(nameof(data));
+        
+        if (index < 0 || index >= _count) throw new ArgumentException("Index out of bounds" , nameof(index));
+        
+        if (_count == 0) throw new IndexOutOfRangeException("List is empty");
+
+        var currentNode = _first;
+        
+        while (index > 0)
+        {
+            currentNode = currentNode!.Next;
+            index--;
+        }
+
+        currentNode!.Data = data;
+
+        return this;
+    }
+
+    public T this[
+        int index]
+    {
+        get
+        {
+            FindAt(out var findValue, index);
+            return findValue;
+        }
+
+        set => UpdateAt(value, index);
     }
 
     #endregion CRD
+
+    #region plushki
+
+    public LinkedList<T> Reverse()
+    {
+        if (_count == 0) throw new IndexOutOfRangeException("List is empty");
+
+        var currentNode = _first;
+        LinkedListNode<T>? previousNode = null;
+
+        while (currentNode != null)
+        {
+            var temp = currentNode.Next;
+            currentNode.Next = previousNode;
+            previousNode = currentNode;
+            currentNode = temp;
+        }
+        
+        //TODO ПЕРЕДЕЛАТЬ ПОЗЖЕ
+        
+        return this;
+    }
+
+    #endregion plushki
 }

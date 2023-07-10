@@ -304,7 +304,11 @@ class Program
         {
             var list = new List.LinkedList<int>();
 
-            list.PushFront(1).PushFront(2).PushBack(3).InsertByIndex(4, 1);
+            list.PushBack(1).PushBack(2).PushBack(3).Reverse();
+            
+            //list.PushFront(1).PushFront(2).PushFront(3);
+
+            var x = 10;
 
             Console.WriteLine(list.First);
             Console.WriteLine(list.Last);
