@@ -1,9 +1,9 @@
 ﻿namespace Sorting;
 
-public sealed class InsertionSort<T> : 
-    ASort<T>
+public sealed class InsertionSort : 
+    ASort
 {
-    public override T[] Sort(
+    public override T[] Sort<T>(
         T[]? collection,
         SortingMode mode,
         Comparison<T> comparison)

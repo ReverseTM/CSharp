@@ -37,6 +37,9 @@
         }
       },
       "List/1.0.0": {
+        "dependencies": {
+          "Sorting": "1.0.0"
+        },
         "runtime": {
           "List.dll": {}
         }

@@ -1,5 +1,7 @@
 namespace EnumerableExtensions;
 
+
+// Под определённый тип
 public class ElementsEqualityComparer<T>:
     IEqualityComparer<T>
 {

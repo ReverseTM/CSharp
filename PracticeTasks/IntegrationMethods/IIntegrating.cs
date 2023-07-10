@@ -2,8 +2,7 @@
 
 public interface IIntegrating
 {
-    double Сalculate(
-        Func<double, double> function,
+    (double, int n, long) Сalculate(Func<double, double> function,
         double lowerBound,
         double upperBound,
         double precision);
@@ -12,5 +11,4 @@ public interface IIntegrating
     {
         get;
     }
-    
 }

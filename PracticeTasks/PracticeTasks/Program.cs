@@ -49,6 +49,7 @@ class Program
         {
             var resultGenCombination = new int[] { 1, 2, 3 }.GenCombination(3, ElementsEqualityComparer<int>.Instance);
 
+            Console.WriteLine("Combinations");
             foreach (var set in resultGenCombination)
             {
                 var array = set.ToArray();
@@ -84,6 +85,7 @@ class Program
         {
             var resultGenSubset = new int[] { 1, 2, 3 }.GenSubset(ElementsEqualityComparer<int>.Instance);
         
+            Console.WriteLine("Subsets");
             foreach (var set in resultGenSubset)
             {
                 var array = set.ToArray();
@@ -117,7 +119,8 @@ class Program
         try
         {
             var resultGenPermutation = new int[] { 1, 2, 3}.GenPermutation(ElementsEqualityComparer<int>.Instance);
-        
+
+            Console.WriteLine("Permutations");
             foreach (var permutation in resultGenPermutation)
             {
                 var array = permutation.ToArray();
@@ -163,7 +166,7 @@ class Program
             // 1 CASE
             Console.WriteLine("InsertionSort");
             
-            numbers.Sort(ASort<IntAndString>.SortingMode.Ascending, new InsertionSort<IntAndString>());
+            numbers.Sort(ASort.SortingMode.Ascending, ASort.SortingAlgorithm.InsertionSort);
             
             foreach (var item in numbers)
             {
@@ -174,7 +177,7 @@ class Program
             // 2 CASE
             Console.WriteLine("SelectionSort");
             
-            numbers.Sort(ASort<IntAndString>.SortingMode.Descending, new SelectionSort<IntAndString>(), IntAndStringComparer.Instance);
+            numbers.Sort(ASort.SortingMode.Descending, ASort.SortingAlgorithm.SelectionSort, IntAndStringComparer.Instance);
             
             foreach (var item in numbers)
             {
@@ -185,7 +188,7 @@ class Program
             // 3 CASE
             Console.WriteLine("HeapSort");
             
-            numbers.Sort(ASort<IntAndString>.SortingMode.Ascending, new HeapSort<IntAndString>(), (IComparer<IntAndString>)IntAndStringComparer.Instance);
+            numbers.Sort(ASort.SortingMode.Ascending, ASort.SortingAlgorithm.HeapSort, (IComparer<IntAndString>)IntAndStringComparer.Instance);
             
             foreach (var item in numbers)
             {
@@ -196,7 +199,7 @@ class Program
             // 4 CASE
             Console.WriteLine("QuickSort");
             
-            numbers.Sort(ASort<IntAndString>.SortingMode.Descending, new QuickSort<IntAndString>(), cmp);
+            numbers.Sort(ASort.SortingMode.Descending, ASort.SortingAlgorithm.QuickSort, cmp);
             
             foreach (var item in numbers)
             {
@@ -206,7 +209,7 @@ class Program
             
             Console.WriteLine("MergeSort");
             
-            numbers.Sort(ASort<IntAndString>.SortingMode.Descending, new MergeSort<IntAndString>());
+            numbers.Sort(ASort.SortingMode.Descending, ASort.SortingAlgorithm.MergeSort);
             
             foreach (var item in numbers)
             {
@@ -232,45 +235,32 @@ class Program
     {
         double Function(double x) => x / (x - 1);
 
-        var leftRectanglesMethod = new LeftRectanglesMethod();
-        var rightRectanglesMethod = new RightRectanglesMethod();
-        var middleRectanglesMethod = new MiddleRectanglesMethod();
-        var trapezoidalMethod = new TrapezoidalMethod();
-        var parabolaMethod = new ParabolaMethod();
+        var methods = new AIntegrating[]
+        {
+            new LeftRectanglesMethod(),
+            new RightRectanglesMethod(),
+            new MiddleRectanglesMethod(),
+            new TrapezoidalMethod(),
+            new ParabolaMethod()
+        };
 
         var iterationsCount = new Dictionary<string, int>();
         var leadTime = new Dictionary<string, long>();
-        
-        const double precision = 0.0000001;
 
-        const int ticksInMilliSecond = 10000;
+        const double lowerBound = 4;
+        const double upperBound = 10;
+        const double precision = 0.0000001;
 
         try
         {
-            Console.WriteLine(
-                $"{leftRectanglesMethod.MethodName}: {leftRectanglesMethod.Сalculate(Function, 4, 10, precision)} ");
-            iterationsCount.Add(leftRectanglesMethod.MethodName, leftRectanglesMethod.IterationsCount);
-            leadTime.Add(leftRectanglesMethod.MethodName, leftRectanglesMethod.Time);
-
-            Console.WriteLine(
-                $"{rightRectanglesMethod.MethodName}: {rightRectanglesMethod.Сalculate(Function, 4, 10, precision)} ");
-            iterationsCount.Add(rightRectanglesMethod.MethodName, rightRectanglesMethod.IterationsCount);
-            leadTime.Add(rightRectanglesMethod.MethodName, rightRectanglesMethod.Time);
-
-            Console.WriteLine(
-                $"{middleRectanglesMethod.MethodName}: {middleRectanglesMethod.Сalculate(Function, 4, 10, precision)} ");
-            iterationsCount.Add(middleRectanglesMethod.MethodName, middleRectanglesMethod.IterationsCount);
-            leadTime.Add(middleRectanglesMethod.MethodName, middleRectanglesMethod.Time);
-
-            Console.WriteLine(
-                $"{trapezoidalMethod.MethodName}: {trapezoidalMethod.Сalculate(Function, 4, 10, precision)} ");
-            iterationsCount.Add(trapezoidalMethod.MethodName, trapezoidalMethod.IterationsCount);
-            leadTime.Add(trapezoidalMethod.MethodName, trapezoidalMethod.Time);
-
-            Console.WriteLine($"{parabolaMethod.MethodName}: {parabolaMethod.Сalculate(Function, 4, 10, precision)} ");
-            iterationsCount.Add(parabolaMethod.MethodName, parabolaMethod.IterationsCount);
-            leadTime.Add(parabolaMethod.MethodName, parabolaMethod.Time);
-
+            foreach (var method in methods)
+            {
+                var result = method.Сalculate(Function, lowerBound, upperBound, precision);
+                Console.WriteLine($"{method.MethodName}: {result.Item1}");
+                iterationsCount.Add(method.MethodName, result.Item2);
+                leadTime.Add(method.MethodName, result.Item3);
+            }
+            
             var sortedIterationCount = from element in iterationsCount orderby element.Value ascending select element;
             var sortedLeadTime = from element in leadTime orderby element.Value ascending select element;
 
@@ -302,16 +292,27 @@ class Program
     {
         try
         {
-            var list = new List.LinkedList<int>();
-
-            list.PushBack(1).PushBack(2).PushBack(3).Reverse();
-            
-            //list.PushFront(1).PushFront(2).PushFront(3);
-
-            var x = 10;
-
-            Console.WriteLine(list.First);
-            Console.WriteLine(list.Last);
+            var list1 = new List.LinkedList<int>();
+            list1.PushBack(2).PushBack(3).PushFront(1).InsertAt(4, 3);
+            var list2 = (List.LinkedList<int>)list1.Clone();
+            list2.RemoveAt(2).PopFront();
+            list2.PushBack(10)[2] = 5;
+            Console.WriteLine($"List1: {list1}");
+            Console.WriteLine($"Reverse list1: {!list1}");
+            list1 = list1.Sort((x, y) => x.CompareTo(y));
+            Console.WriteLine("Source lists");
+            Console.WriteLine(list1);
+            Console.WriteLine(list2);
+            Console.WriteLine($"Concat: {list1 + list2}");
+            Console.WriteLine($"Intersection: {list1 & list2}");
+            Console.WriteLine($"Union: {list1 | list2}");
+            Console.WriteLine($"Except: {list1 - list2}");
+            Console.WriteLine($"Operator*: {list1 * list2}");
+            Console.WriteLine($"List1 equal list2: {list1 == list2}");
+            list2.PopBack().InsertAt(3, 1).PushFront(1);
+            Console.WriteLine(list1);
+            Console.WriteLine(list2);
+            Console.WriteLine($"List1 equal list2: {list1 == list2}");
         }
         catch (ArgumentNullException ex)
         {
@@ -333,7 +334,6 @@ class Program
         //Task2();
         //Task3();
         //Task4();
-        
         Task5();
     }
 }

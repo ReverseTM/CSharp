@@ -1,6 +1,6 @@
 namespace Sorting;
 
-public abstract class ASort<T>
+public abstract class ASort
 {
     public enum SortingMode
     {
@@ -8,5 +8,14 @@ public abstract class ASort<T>
         Descending
     }
 
-    public abstract T[] Sort(T[]? collection, SortingMode mode, Comparison<T> comparison);
+    public enum SortingAlgorithm
+    {
+        InsertionSort,
+        SelectionSort,
+        QuickSort,
+        HeapSort,
+        MergeSort
+    }
+    
+    public abstract T[] Sort<T>(T[]? collection, SortingMode mode, Comparison<T> comparison);
 }

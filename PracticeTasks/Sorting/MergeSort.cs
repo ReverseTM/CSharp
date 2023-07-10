@@ -1,9 +1,9 @@
 namespace Sorting;
 
-public sealed class MergeSort<T> : 
-    ASort<T>
+public sealed class MergeSort : 
+    ASort
 {
-    public override T[] Sort(
+    public override T[] Sort<T>(
         T[]? collection,
         SortingMode mode,
         Comparison<T> comparison)
@@ -13,7 +13,7 @@ public sealed class MergeSort<T> :
         return MSort(collection, 0, collection.Length - 1, mode, comparison);
     }
     
-    private static T[] MSort(
+    private static T[] MSort<T>(
         T[] collection,
         int lowIndex,
         int highIndex,
@@ -31,7 +31,7 @@ public sealed class MergeSort<T> :
         return collection;
     }
     
-    private static void Merge(
+    private static void Merge<T>(
         T[] collection,
         int lowIndex,
         int middleIndex,

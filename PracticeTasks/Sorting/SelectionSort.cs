@@ -1,9 +1,9 @@
 namespace Sorting;
 
-public sealed class SelectionSort<T> : 
-    ASort<T>
+public sealed class SelectionSort : 
+    ASort
 {
-    public override T[] Sort(
+    public override T[] Sort<T>(
         T[]? collection,
         SortingMode mode,
         Comparison<T> comparison)

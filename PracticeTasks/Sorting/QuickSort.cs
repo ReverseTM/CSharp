@@ -1,9 +1,9 @@
 namespace Sorting;
 
-public sealed class QuickSort<T> : 
-    ASort<T>
+public sealed class QuickSort : 
+    ASort
 {
-    public override T[] Sort(
+    public override T[] Sort<T>(
         T[]? collection,
         SortingMode mode,
         Comparison<T> comparison)
@@ -13,7 +13,7 @@ public sealed class QuickSort<T> :
         return QSort(collection, 0, collection.Length - 1, mode, comparison);
     }
     
-    private static T[] QSort(
+    private static T[] QSort<T>(
         T[] collection,
         int minIndex,
         int maxIndex,
@@ -30,7 +30,7 @@ public sealed class QuickSort<T> :
         return collection;
     }
     
-    private static int FindPivot(
+    private static int FindPivot<T>(
         T[] collection,
         int minIndex,
         int maxIndex,

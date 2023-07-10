@@ -1,9 +1,7 @@
 ﻿namespace Domain;
 
 public sealed class Student :
-    IEquatable<Enum>,
-    IEquatable<Student>,
-    IEquatable<object>
+    IEquatable<Student>
 {
     public enum Course
     {
@@ -36,8 +34,6 @@ public sealed class Student :
         _patronymic = patronymic ?? throw new ArgumentNullException(nameof(patronymic));
         _studyGroup = studyGroup ?? throw new ArgumentNullException(nameof(studyGroup));
         _course = course;
-
-        CourseNumberValue = _studyGroup[studyGroup.IndexOf('-') + 1] - '0';
     }
 
     public string SurnameValue => _surname;
@@ -52,7 +48,7 @@ public sealed class Student :
 
     public int CourseNumberValue
     {
-        get;
+        get => _studyGroup[_studyGroup.IndexOf('-') + 1] - '0';
     }
 
     public override string ToString()
@@ -77,13 +73,6 @@ public sealed class Student :
                && _course.Equals(@student._course);
     }
 
-    public bool Equals(Enum? @enum)
-    {
-        if (@enum == null) return false;
-            
-        return _course.Equals(@enum);
-    }
-    
     public override bool Equals(object? obj)
     {
         if (obj == null) return false;
@@ -92,29 +81,6 @@ public sealed class Student :
         if (obj is Student @student)
         {
             return Equals(@student);
-        }
-        if (obj is Course @course)
-        {
-            return _course.Equals(@course);
-        }
-
-        return false;
-    }
-
-    bool IEquatable<object>.Equals(object? obj)
-    {
-        if (obj == null)
-        {
-            return false;
-        }
-
-        if (obj is Student @student)
-        {
-            return Equals(@student);
-        }
-        if (obj is Course @course)
-        {
-            return _course.Equals(@course);
         }
 
         return false;

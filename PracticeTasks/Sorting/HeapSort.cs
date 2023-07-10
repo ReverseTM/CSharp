@@ -1,9 +1,9 @@
 namespace Sorting;
 
-public sealed class HeapSort<T> : 
-    ASort<T>
+public sealed class HeapSort : 
+    ASort
 {
-    public override T[] Sort(
+    public override T[] Sort<T>(
         T[]? collection,
         SortingMode mode,
         Comparison<T> comparison)
@@ -22,8 +22,8 @@ public sealed class HeapSort<T> :
 
         return collection;
     }
-    
-    private static void Heapify(
+
+    private static void Heapify<T>(
         T[] collection,
         int size,
         int root,
